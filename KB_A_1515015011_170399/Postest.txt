@@ -1,0 +1,15 @@
+Nama : Gilbert Pranajaya Z
+Nim  : 1515015011
+POSTTEST 2 KECERDASAN BUATAN
+
+Macam-macam keyword di visual prolog
+1. Global	: menentukan bahwa section fact adalah global dalam global.
+2. Nocopy	: normalnya panggilan fakta akan mengikat variabel ke sebuah string atau ke sebuah object jamak.
+3. Determ	: menentukan bahwa hanya boleh ada satu fakta dari suatu predikat sepanjang program berjalan.
+4. Nondeterm	: menentukan bahwa kemungkinan ada sejumlah fakta dari suatu predikat sepanjang program berjalan(default)
+5. Predicates	: memberikan gambaran akan kata-kata yang ada dalam program.
+6. Facts	: untuk memulai section facts.
+7. Goal		: mendefinisikan titik masuk utama ke program Visual Prolog.
+8. Domain	: menyatakan jenis variable atau argumen.
+9. Clause	: memberikan fakta-fakta yang ada untuk memberikan gambaran kepada VPE dalam melakukan pengujian untuk menjadi solusi dari pertanyaan yang di berikan.
+10.Single	: menentukan hanya satu fakta dari predikat yang akan selalu ada. 
