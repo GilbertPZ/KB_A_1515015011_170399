@@ -1,0 +1,58 @@
+GILBERT PRANAJAYA Z
+1515015011
+A'2015
+
+predicates
+buy_car(symbol,symbol) - determ (i,o)
+car(symbol,symbol,integer) - nondeterm (i,o,o)
+colors(symbol,symbol) - nondeterm (i,i)
+
+clauses
+buy_car(Model,Color):-
+car(Model,Color,Price),
+colors(Color,sexy),!,
+Price > 25000.
+
+car(maserati,green,25000).
+car(corvette,black,24000).
+car(corvette,red,26000).
+car(porsche,red,24000).
+
+colors(red,sexy).
+colors(black,mean).
+colors(green,preppy).
+
+goal
+buy_car(corvette,B).
+
+**********  BACKTRACKING **********
+buy_car(Model,Color):-
+car(Model,Color,Price),
+colors(Color,sexy),!,
+Price > 25000.
+
+			model
+
+model			color		price
+maserati(A)		green(A)	25000
+corvette(B)		black(A)	24000
+corvette(B)		red(B)		26000
+porsche(A)		red(A)		24000
+
+
+	color
+
+
+red(B)		sexy(B)
+black(A)	mean(A)
+green(A)	preppy(A)
+
+						PENJELASAN
+
+
+Jadi model disini pada program diatas sudah di tentukan untuk memanggil corvette, maka akan memilih pertama mobil corvette berwarna (hitam).
+Setelah itu, lanjut ke Y dimana akan memanggil (sexy). Dimana (sexy) yang berwarna (merah).
+kita lihat pilihan awan, tidak sesuai dengan pemanggilan jadi pada program harus memilih bagian kedua corvette dan berwarna (merah) maka akan sesuai dengan pemanggilan (sexy).
+Kenapa price tidak dibandingakan? karena, selesai diseleksi oleh program virtual yang warna ada predicate cutnya (!).
+Jadi predicate cut itu adalah tidak akan bisa memungkinkan terjadinya lacakbalik melewati predicate cut tersebut.
+Jadi hasil akhirnya adalah, awan akan memilih mobil yang bewarna (merah).
